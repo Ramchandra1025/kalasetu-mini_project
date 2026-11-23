@@ -1,0 +1,13 @@
+{
+    "model_name": "IsolationForest",
+    "model_version": "1.0.0",
+    "algorithm": "Isolation Forest",
+    "dataset_type": "synthetic",
+    "research_valid": false,
+    "rows": 30,
+    "feature_count": 35,
+    "anomaly_count": 3,
+    "normal_count": 27,
+    "average_risk_score": 47.24922756913045,
+    "model_path": "E:\\kalasetu\\ml\\models\\anomaly\\isolation_forest.joblib"
+}

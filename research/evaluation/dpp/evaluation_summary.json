@@ -1,0 +1,9 @@
+{
+    "evaluation_samples": 30,
+    "average_completeness_score": 100.0,
+    "verified_passports": 30,
+    "high_completeness": 30,
+    "medium_completeness": 0,
+    "low_completeness": 0,
+    "research_valid": false
+}

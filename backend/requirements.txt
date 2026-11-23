@@ -1,0 +1,11 @@
+Flask
+python-dotenv
+supabase
+requests
+argon2-cffi
+flask-cors
+numpy
+pandas
+scikit-learn
+xgboost
+catboost

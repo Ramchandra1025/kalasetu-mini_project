@@ -1,0 +1,120 @@
+{
+    "experiment_name": "fair_pricing_xgboost_pipeline_test",
+    "model_name": "xgboost_regressor",
+    "model_version": "1.0.0",
+    "dataset_file": "E:\\kalasetu\\ml\\datasets\\pricing\\pricing.csv",
+    "dataset_size": 30,
+    "training_samples": 21,
+    "validation_samples": 4,
+    "test_samples": 5,
+    "feature_count": 21,
+    "random_seed": 42,
+    "data_type": "synthetic_pipeline_testing_data",
+    "research_valid": false,
+    "warning": "The current dataset is synthetic and is used only for pipeline validation. These results must not be presented as research findings.",
+    "created_at": "2026-10-08T23:17:37.803273",
+    "validation_predictions": [
+        {
+            "actual_price": 2700.0,
+            "predicted_price": 2533.783203125
+        },
+        {
+            "actual_price": 3200.0,
+            "predicted_price": 2753.30224609375
+        },
+        {
+            "actual_price": 3800.0,
+            "predicted_price": 3532.389892578125
+        },
+        {
+            "actual_price": 5200.0,
+            "predicted_price": 5608.5751953125
+        }
+    ],
+    "feature_importance": [
+        {
+            "feature": "labor_cost",
+            "importance": 0.4680701792240143
+        },
+        {
+            "feature": "production_hours",
+            "importance": 0.2529008686542511
+        },
+        {
+            "feature": "complexity_score",
+            "importance": 0.14936111867427826
+        },
+        {
+            "feature": "material_cost",
+            "importance": 0.07827511429786682
+        },
+        {
+            "feature": "craft_category_pottery",
+            "importance": 0.02784198708832264
+        },
+        {
+            "feature": "craft_category_wood_craft",
+            "importance": 0.013649392873048782
+        },
+        {
+            "feature": "size_cm",
+            "importance": 0.004138880874961615
+        },
+        {
+            "feature": "region_kerala",
+            "importance": 0.0025949955452233553
+        },
+        {
+            "feature": "craft_category_metal_craft",
+            "importance": 0.0024975670967251062
+        },
+        {
+            "feature": "material_wood",
+            "importance": 0.0001301104639424011
+        },
+        {
+            "feature": "demand_score",
+            "importance": 0.00012533532571978867
+        },
+        {
+            "feature": "region_rajasthan",
+            "importance": 0.00012160613550804555
+        },
+        {
+            "feature": "craft_category_textile",
+            "importance": 8.993046503746882e-05
+        },
+        {
+            "feature": "material_clay",
+            "importance": 8.739016629988328e-05
+        },
+        {
+            "feature": "region_karnataka",
+            "importance": 4.932606316288002e-05
+        },
+        {
+            "feature": "region_tamil nadu",
+            "importance": 4.54948385595344e-05
+        },
+        {
+            "feature": "material_metal",
+            "importance": 1.2242709090060089e-05
+        },
+        {
+            "feature": "region_west bengal",
+            "importance": 6.538093657582067e-06
+        },
+        {
+            "feature": "region_maharashtra",
+            "importance": 1.551162881696655e-06
+        },
+        {
+            "feature": "region_gujarat",
+            "importance": 4.060925107296498e-07
+        },
+        {
+            "feature": "material_cotton",
+            "importance": 0.0
+        }
+    ]
+}

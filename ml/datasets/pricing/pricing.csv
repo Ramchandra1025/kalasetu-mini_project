@@ -1,0 +1,31 @@
+craft_category,material,region,size_cm,production_hours,material_cost,labor_cost,demand_score,complexity_score,fair_price
+wood_craft,wood,Karnataka,25,8,800,1200,72,65,2500
+wood_craft,wood,Rajasthan,30,10,1000,1500,68,72,3200
+wood_craft,wood,Maharashtra,20,6,600,900,60,55,1900
+wood_craft,wood,Karnataka,40,15,1500,2200,82,80,4800
+wood_craft,wood,Kerala,35,12,1300,1800,75,74,3900
+textile,cotton,Karnataka,100,6,500,800,78,60,1800
+textile,cotton,Rajasthan,120,8,650,1100,85,68,2400
+textile,cotton,Gujarat,90,5,450,700,65,52,1600
+textile,cotton,West Bengal,150,10,900,1400,88,75,3200
+textile,cotton,Karnataka,80,4,350,600,70,48,1400
+pottery,clay,Karnataka,20,5,250,700,64,55,1300
+pottery,clay,Rajasthan,25,7,300,900,76,65,1700
+pottery,clay,Gujarat,30,8,400,1000,82,70,2100
+pottery,clay,Karnataka,15,4,200,550,58,45,1100
+pottery,clay,West Bengal,35,10,500,1300,80,78,2600
+metal_craft,metal,Karnataka,15,8,1200,1400,74,70,3000
+metal_craft,metal,Rajasthan,20,12,1800,2000,86,82,4500
+metal_craft,metal,Gujarat,18,10,1500,1700,80,76,3800
+metal_craft,metal,Karnataka,25,15,2200,2500,90,88,5500
+metal_craft,metal,Maharashtra,12,6,900,1100,62,60,2400
+wood_craft,wood,Kerala,28,9,900,1300,70,67,2800
+wood_craft,wood,Tamil Nadu,32,11,1100,1600,77,73,3500
+textile,cotton,West Bengal,110,7,600,1000,81,64,2200
+textile,cotton,Gujarat,130,9,750,1250,84,70,2700
+pottery,clay,Rajasthan,40,12,600,1500,87,82,3000
+pottery,clay,Gujarat,22,6,280,800,69,58,1500
+metal_craft,metal,Rajasthan,30,18,2700,3000,92,90,6500
+metal_craft,metal,Karnataka,22,13,1900,2200,85,84,4700
+wood_craft,wood,Maharashtra,45,18,1800,2600,79,86,5200
+textile,cotton,Karnataka,160,12,1000,1700,91,78,3600

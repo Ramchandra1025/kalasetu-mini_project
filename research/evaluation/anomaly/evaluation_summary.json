@@ -1,0 +1,11 @@
+{
+    "total_samples": 30,
+    "anomalies_detected": 3,
+    "normal_samples": 27,
+    "high_risk": 0,
+    "suspicious": 3,
+    "normal": 27,
+    "average_risk_score": 47.24922756913045,
+    "research_valid": false,
+    "dataset_type": "synthetic"
+}

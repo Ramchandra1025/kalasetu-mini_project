@@ -1,0 +1,76 @@
+{
+    "evaluation_samples": 30,
+    "accuracy": 1.0,
+    "classification_report": {
+        "CRITICAL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 11.0
+        },
+        "HEALTHY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+        },
+        "LOW_STOCK": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+        },
+        "OVERSTOCK": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 3.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 30.0
+        },
+        "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 30.0
+        }
+    },
+    "confusion_matrix": [
+        [
+            11,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            8,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            8,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3
+        ]
+    ],
+    "labels": [
+        "CRITICAL",
+        "HEALTHY",
+        "LOW_STOCK",
+        "OVERSTOCK"
+    ],
+    "research_valid": false
+}

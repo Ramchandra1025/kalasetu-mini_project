@@ -1,0 +1,41 @@
+{
+    "model": "XGBRegressor",
+    "task": "fair_price_regression",
+    "metrics": {
+        "mae": 113.156201171875,
+        "rmse": 153.32566576126166,
+        "r2": 0.9808310830225586,
+        "mape": 4.085522648928255
+    },
+    "predictions": [
+        {
+            "actual_price": 3000.0,
+            "predicted_price": 3307.70849609375,
+            "absolute_error": 307.70849609375
+        },
+        {
+            "actual_price": 3000.0,
+            "predicted_price": 2928.966552734375,
+            "absolute_error": 71.033447265625
+        },
+        {
+            "actual_price": 1400.0,
+            "predicted_price": 1475.443359375,
+            "absolute_error": 75.443359375
+        },
+        {
+            "actual_price": 4700.0,
+            "predicted_price": 4589.9111328125,
+            "absolute_error": 110.0888671875
+        },
+        {
+            "actual_price": 2100.0,
+            "predicted_price": 2101.5068359375,
+            "absolute_error": 1.5068359375
+        }
+    ],
+    "data_type": "synthetic_pipeline_testing_data",
+    "research_valid": false,
+    "warning": "These evaluation results are based on synthetic pipeline-testing data and must not be presented as research findings.",
+    "created_at": "2026-10-08T23:19:09.759011"
+}

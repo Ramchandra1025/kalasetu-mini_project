@@ -1,0 +1,48 @@
+{
+    "category_to_index": {
+        "metal_craft": 0,
+        "pottery": 1,
+        "textile": 2,
+        "wood_craft": 3
+    },
+    "material_to_index": {
+        "clay": 0,
+        "cotton": 1,
+        "metal": 2,
+        "wood": 3
+    },
+    "color_to_index": {
+        "blue": 0,
+        "bronze": 1,
+        "brown": 2,
+        "gold": 3,
+        "green": 4,
+        "orange": 5,
+        "red": 6,
+        "silver": 7,
+        "white": 8
+    },
+    "index_to_category": {
+        "0": "metal_craft",
+        "1": "pottery",
+        "2": "textile",
+        "3": "wood_craft"
+    },
+    "index_to_material": {
+        "0": "clay",
+        "1": "cotton",
+        "2": "metal",
+        "3": "wood"
+    },
+    "index_to_color": {
+        "0": "blue",
+        "1": "bronze",
+        "2": "brown",
+        "3": "gold",
+        "4": "green",
+        "5": "orange",
+        "6": "red",
+        "7": "silver",
+        "8": "white"
+    }
+}

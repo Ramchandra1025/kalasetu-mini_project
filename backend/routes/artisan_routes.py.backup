@@ -1,0 +1,290 @@
+from flask import Blueprint, jsonify, request, session
+from backend.database import get_supabase
+
+artisan_bp = Blueprint(
+    "artisan",
+    __name__,
+    url_prefix="/api/artisan"
+)
+
+
+def get_current_account():
+
+    account_id = session.get("account_id")
+
+    if not account_id:
+        return None
+
+    supabase = get_supabase()
+
+    result = (
+        supabase
+        .table("accounts")
+        .select("*")
+        .eq("id", account_id)
+        .limit(1)
+        .execute()
+    )
+
+    if not result.data:
+        return None
+
+    return result.data[0]
+
+
+# ============================================================
+# DASHBOARD
+# ============================================================
+
+@artisan_bp.get("/dashboard")
+def dashboard():
+
+    account = get_current_account()
+
+    if not account:
+        return jsonify({
+            "message": "Authentication required."
+        }), 401
+
+
+    if account["account_type"] != "artisan":
+
+        return jsonify({
+            "message": "Artisan account required."
+        }), 403
+
+
+    supabase = get_supabase()
+
+    artisan_id = account["id"]
+
+
+    # Products
+
+    products_result = (
+        supabase
+        .table("products")
+        .select("*")
+        .eq("artisan_id", artisan_id)
+        .order("created_at", desc=True)
+        .execute()
+    )
+
+
+    products = products_result.data or []
+
+
+    # Orders
+
+    orders_result = (
+        supabase
+        .table("orders")
+        .select("id,status,total_amount")
+        .eq("artisan_id", artisan_id)
+        .execute()
+    )
+
+
+    orders = orders_result.data or []
+
+
+    pending_orders = sum(
+        1
+        for order in orders
+        if order.get("status") in [
+            "pending",
+            "processing"
+        ]
+    )
+
+
+    revenue = sum(
+        float(order.get("total_amount") or 0)
+        for order in orders
+    )
+
+
+    return jsonify({
+
+        "stats": {
+
+            "total_products":
+                len(products),
+
+            "pending_orders":
+                pending_orders,
+
+            "potential_buyers":
+                0,
+
+            "estimated_revenue":
+                revenue
+
+        },
+
+        "products":
+            products[:20]
+
+    }), 200
+
+
+# ============================================================
+# ADD PRODUCT
+# ============================================================
+
+@artisan_bp.post("/products")
+def add_product():
+
+    account = get_current_account()
+
+    if not account:
+
+        return jsonify({
+            "message": "Authentication required."
+        }), 401
+
+
+    if account["account_type"] != "artisan":
+
+        return jsonify({
+            "message": "Artisan account required."
+        }), 403
+
+
+    name = request.form.get(
+        "name",
+        ""
+    ).strip()
+
+
+    material = request.form.get(
+        "material",
+        ""
+    ).strip()
+
+
+    base_price = request.form.get(
+        "base_price",
+        "0"
+    )
+
+
+    image = request.files.get(
+        "image"
+    )
+
+
+    if not name:
+
+        return jsonify({
+            "message": "Product name is required."
+        }), 400
+
+
+    if not image:
+
+        return jsonify({
+            "message": "Product image is required."
+        }), 400
+
+
+    try:
+
+        base_price_value = (
+            float(base_price)
+            if base_price
+            else 0
+        )
+
+    except ValueError:
+
+        base_price_value = 0
+
+
+    # --------------------------------------------------------
+    # TEMPORARY AI RESULT
+    #
+    # Replace this section later with your actual AI pipeline.
+    # --------------------------------------------------------
+
+    ai_analysis = {
+
+        "craft":
+            "Craft Product",
+
+        "material":
+            material or "To be detected",
+
+        "category":
+            "Handicraft",
+
+        "recommended_price":
+            base_price_value
+
+    }
+
+
+    # --------------------------------------------------------
+    # DATABASE
+    # --------------------------------------------------------
+
+    supabase = get_supabase()
+
+
+    product_data = {
+
+        "artisan_id":
+            account["id"],
+
+        "name":
+            name,
+
+        "material":
+            material or None,
+
+        "base_price":
+            base_price_value,
+
+        "recommended_price":
+            ai_analysis["recommended_price"],
+
+        "ai_category":
+            ai_analysis["category"],
+
+        "ai_material":
+            ai_analysis["material"],
+
+        "ai_attributes":
+            ai_analysis
+
+    }
+
+
+    result = (
+        supabase
+        .table("products")
+        .insert(product_data)
+        .execute()
+    )
+
+
+    if not result.data:
+
+        return jsonify({
+            "message":
+                "Failed to save product."
+        }), 500
+
+
+    return jsonify({
+
+        "message":
+            "Product added successfully.",
+
+        "product":
+            result.data[0],
+
+        "ai_analysis":
+            ai_analysis
+
+    }), 201

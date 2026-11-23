@@ -1,0 +1,10 @@
+{
+    "model_name": "Digital Product Passport AI",
+    "model_version": "1.0.0",
+    "algorithm": "Structured Provenance + Integrity Hash + Completeness Intelligence",
+    "dataset_type": "synthetic",
+    "dataset_rows": 30,
+    "average_completeness_score": 100.0,
+    "verified_passports": 30,
+    "research_valid": false
+}

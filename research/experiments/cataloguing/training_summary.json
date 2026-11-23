@@ -1,0 +1,75 @@
+{
+    "experiment": "KalaSetu Cataloguing Model 1",
+    "architecture": "EfficientNet-B0",
+    "model_type": "Multi-task image classification",
+    "tasks": [
+        "Product Category",
+        "Material",
+        "Color"
+    ],
+    "device": "cpu",
+    "epochs": 10,
+    "training_time_seconds": 9.048979043960571,
+    "best_validation_loss": 4.557212829589844,
+    "final_training_metrics": {
+        "loss": 4.372824549674988,
+        "category_accuracy": 0.375,
+        "material_accuracy": 0.75,
+        "color_accuracy": 0.625
+    },
+    "final_validation_metrics": {
+        "loss": 4.909633636474609,
+        "category_accuracy": 0.0,
+        "material_accuracy": 1.0,
+        "color_accuracy": 0.0
+    },
+    "label_maps": {
+        "category_to_index": {
+            "metal_craft": 0,
+            "pottery": 1,
+            "textile": 2,
+            "wood_craft": 3
+        },
+        "material_to_index": {
+            "clay": 0,
+            "cotton": 1,
+            "metal": 2,
+            "wood": 3
+        },
+        "color_to_index": {
+            "blue": 0,
+            "bronze": 1,
+            "brown": 2,
+            "gold": 3,
+            "green": 4,
+            "orange": 5,
+            "red": 6,
+            "silver": 7,
+            "white": 8
+        },
+        "index_to_category": {
+            "0": "metal_craft",
+            "1": "pottery",
+            "2": "textile",
+            "3": "wood_craft"
+        },
+        "index_to_material": {
+            "0": "clay",
+            "1": "cotton",
+            "2": "metal",
+            "3": "wood"
+        },
+        "index_to_color": {
+            "0": "blue",
+            "1": "bronze",
+            "2": "brown",
+            "3": "gold",
+            "4": "green",
+            "5": "orange",
+            "6": "red",
+            "7": "silver",
+            "8": "white"
+        }
+    },
+    "research_warning": "The current dataset contains only 12 images and is suitable for pipeline testing only. The resulting metrics must not be interpreted as research-grade generalization performance."
+}

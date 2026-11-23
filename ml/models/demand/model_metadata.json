@@ -1,0 +1,28 @@
+{
+    "model_name": "xgboost_demand_regressor",
+    "model_version": "1.0.0",
+    "model_type": "XGBRegressor",
+    "target": "future_demand",
+    "feature_count": 15,
+    "feature_names": [
+        "month",
+        "historical_demand",
+        "previous_demand",
+        "price",
+        "demand_growth",
+        "product_category_metal_craft",
+        "product_category_pottery",
+        "product_category_textile",
+        "product_category_wood_craft",
+        "region_gujarat",
+        "region_karnataka",
+        "region_maharashtra",
+        "region_rajasthan",
+        "season_spring",
+        "season_winter"
+    ],
+    "model_file": "demand_prediction_model.json",
+    "encoder_file": "feature_encoder.joblib",
+    "data_type": "synthetic_pipeline_testing_data",
+    "research_valid": false
+}

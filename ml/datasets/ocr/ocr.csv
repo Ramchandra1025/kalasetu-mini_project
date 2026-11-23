@@ -1,0 +1,9 @@
+image_id,image_path,expected_text,category
+OCR001,OCR001.png,Handcrafted wooden wall decoration made by traditional artisan,wood_craft
+OCR002,OCR002.png,Handwoven cotton saree made by skilled artisan,textile
+OCR003,OCR003.png,Traditional clay pottery made by local artisan,pottery
+OCR004,OCR004.png,Handcrafted brass lamp with traditional carving,metal_craft
+OCR005,OCR005.png,Natural wood carving craft for home decoration,wood_craft
+OCR006,OCR006.png,Handwoven silk textile with traditional design,textile
+OCR007,OCR007.png,Terracotta clay pot made using traditional pottery,pottery
+OCR008,OCR008.png,Traditional copper craft made by skilled artisan,metal_craft

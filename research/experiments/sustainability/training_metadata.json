@@ -1,0 +1,11 @@
+{
+    "model_name": "Sustainability Intelligence AI",
+    "model_version": "1.0.0",
+    "algorithm": "Explainable Sustainability Scoring",
+    "dataset_path": "E:\\kalasetu\\ml\\datasets\\sustainability\\sustainability.csv",
+    "dataset_rows": 30,
+    "average_sustainability_score": 77.98,
+    "average_estimated_carbon_kg_co2e": 7.781,
+    "dataset_type": "synthetic",
+    "research_valid": false
+}

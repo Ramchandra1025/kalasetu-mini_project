@@ -1,0 +1,12 @@
+{
+    "model_name": "Smart Logistics AI",
+    "model_version": "1.0.0",
+    "algorithm": "Geographic Clustering + OR-Tools VRP",
+    "dataset_path": "E:\\kalasetu\\ml\\datasets\\logistics\\logistics.csv",
+    "dataset_rows": 20,
+    "cluster_count": 2,
+    "vehicle_count": 4,
+    "vehicle_capacity": 10,
+    "dataset_type": "synthetic",
+    "research_valid": false
+}

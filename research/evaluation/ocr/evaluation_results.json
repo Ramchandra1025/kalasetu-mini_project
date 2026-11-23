@@ -1,0 +1,74 @@
+[
+    {
+        "image_id": "OCR001",
+        "expected_category": "wood_craft",
+        "predicted_category": "wood_craft",
+        "category_correct": true,
+        "ocr_confidence": 91.0,
+        "text_similarity": 77.78,
+        "predicted_text": "Handcrafted wooden wall decoration made by traditional artisat"
+    },
+    {
+        "image_id": "OCR002",
+        "expected_category": "textile",
+        "predicted_category": "textile",
+        "category_correct": true,
+        "ocr_confidence": 96.0,
+        "text_similarity": 100.0,
+        "predicted_text": "Handwoven cotton saree made by skilled artisan"
+    },
+    {
+        "image_id": "OCR003",
+        "expected_category": "pottery",
+        "predicted_category": "pottery",
+        "category_correct": true,
+        "ocr_confidence": 95.86,
+        "text_similarity": 100.0,
+        "predicted_text": "Traditional clay pottery made by local artisan"
+    },
+    {
+        "image_id": "OCR004",
+        "expected_category": "metal_craft",
+        "predicted_category": "wood_craft",
+        "category_correct": false,
+        "ocr_confidence": 95.67,
+        "text_similarity": 100.0,
+        "predicted_text": "Handcrafted brass lamp with traditional carving"
+    },
+    {
+        "image_id": "OCR005",
+        "expected_category": "wood_craft",
+        "predicted_category": "wood_craft",
+        "category_correct": true,
+        "ocr_confidence": 95.86,
+        "text_similarity": 100.0,
+        "predicted_text": "Natural wood carving craft for home decoration"
+    },
+    {
+        "image_id": "OCR006",
+        "expected_category": "textile",
+        "predicted_category": "textile",
+        "category_correct": true,
+        "ocr_confidence": 95.67,
+        "text_similarity": 100.0,
+        "predicted_text": "Handwoven silk textile with traditional design"
+    },
+    {
+        "image_id": "OCR007",
+        "expected_category": "pottery",
+        "predicted_category": "pottery",
+        "category_correct": true,
+        "ocr_confidence": 96.0,
+        "text_similarity": 100.0,
+        "predicted_text": "Terracotta clay pot made using traditional pottery"
+    },
+    {
+        "image_id": "OCR008",
+        "expected_category": "metal_craft",
+        "predicted_category": "metal_craft",
+        "category_correct": true,
+        "ocr_confidence": 96.0,
+        "text_similarity": 100.0,
+        "predicted_text": "Traditional copper craft made by skilled artisan"
+    }
+]

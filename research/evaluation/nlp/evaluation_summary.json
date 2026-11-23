@@ -1,0 +1,9 @@
+{
+    "total_products": 24,
+    "vocabulary_size": 208,
+    "category_accuracy": 100.0,
+    "average_description_quality": 75.38,
+    "average_pairwise_similarity": 0.0619,
+    "research_valid": false,
+    "dataset_type": "synthetic"
+}

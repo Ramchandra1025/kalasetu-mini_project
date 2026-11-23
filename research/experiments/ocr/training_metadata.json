@@ -1,0 +1,14 @@
+{
+    "model": "Tesseract OCR",
+    "model_version": "1.0.0",
+    "dataset": "E:\\kalasetu\\ml\\datasets\\ocr\\ocr.csv",
+    "dataset_type": "synthetic",
+    "dataset_rows": 8,
+    "language": "eng",
+    "page_segmentation_mode": 6,
+    "ocr_engine_mode": 3,
+    "tesseract_path": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "training_type": "configuration_and_pipeline_setup",
+    "created_at": "2026-10-08T19:46:59.846429+00:00",
+    "research_valid": false
+}

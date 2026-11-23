@@ -1,0 +1,16 @@
+{
+    "model_name": "Inventory Intelligence AI",
+    "model_version": "1.0.0",
+    "algorithm": "XGBoost Classifier",
+    "dataset_path": "E:\\kalasetu\\ml\\datasets\\inventory\\inventory.csv",
+    "dataset_rows": 30,
+    "feature_count": 35,
+    "classes": [
+        "CRITICAL",
+        "HEALTHY",
+        "LOW_STOCK",
+        "OVERSTOCK"
+    ],
+    "dataset_type": "synthetic",
+    "research_valid": false
+}

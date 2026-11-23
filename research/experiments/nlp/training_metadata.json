@@ -1,0 +1,8 @@
+{
+    "model": "TF-IDF",
+    "model_version": "1.0.0",
+    "dataset_type": "synthetic",
+    "dataset_rows": 24,
+    "vocabulary_size": 208,
+    "research_valid": false
+}

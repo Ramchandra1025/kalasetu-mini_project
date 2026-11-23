@@ -1,0 +1,567 @@
+{
+    "evaluation_samples": 30,
+    "average_sustainability_score": 77.98,
+    "average_estimated_carbon_kg_co2e": 7.781,
+    "high_count": 16,
+    "medium_count": 11,
+    "low_count": 3,
+    "research_valid": false,
+    "results": [
+        {
+            "product_id": "SUS001",
+            "sustainability_score": 84.8,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 78.0,
+                "waste": 90.0,
+                "energy": 70.0,
+                "packaging": 85.0,
+                "transport": 92.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 4.212,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS002",
+            "sustainability_score": 83.45,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 78.0,
+                "waste": 86.67,
+                "energy": 75.0,
+                "packaging": 95.0,
+                "transport": 88.0,
+                "recyclability": 95.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 5.618,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS003",
+            "sustainability_score": 75.5,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 75.0,
+                "waste": 86.67,
+                "energy": 40.0,
+                "packaging": 90.0,
+                "transport": 85.0,
+                "recyclability": 65.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 6.472,
+            "recommendations": [
+                "Reduce production energy consumption."
+            ]
+        },
+        {
+            "product_id": "SUS004",
+            "sustainability_score": 85.5,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 90.0,
+                "waste": 88.0,
+                "energy": 82.0,
+                "packaging": 85.0,
+                "transport": 80.0,
+                "recyclability": 95.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 4.13,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS005",
+            "sustainability_score": 69.25,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 65.0,
+                "waste": 83.33,
+                "energy": 40.0,
+                "packaging": 95.0,
+                "transport": 70.0,
+                "recyclability": 95.0,
+                "local_sourcing": 50.0
+            },
+            "estimated_carbon_kg_co2e": 15.945,
+            "recommendations": [
+                "Reduce production energy consumption.",
+                "Prefer locally or regionally sourced materials."
+            ]
+        },
+        {
+            "product_id": "SUS006",
+            "sustainability_score": 85.89,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 78.0,
+                "waste": 94.44,
+                "energy": 70.83,
+                "packaging": 85.0,
+                "transport": 94.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 3.719,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS007",
+            "sustainability_score": 62.62,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 75.0,
+                "waste": 80.0,
+                "energy": 47.5,
+                "packaging": 20.0,
+                "transport": 75.0,
+                "recyclability": 65.0,
+                "local_sourcing": 50.0
+            },
+            "estimated_carbon_kg_co2e": 7.937,
+            "recommendations": [
+                "Reduce production energy consumption.",
+                "Use recyclable or biodegradable packaging.",
+                "Prefer locally or regionally sourced materials."
+            ]
+        },
+        {
+            "product_id": "SUS008",
+            "sustainability_score": 90.8,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 90.0,
+                "waste": 93.33,
+                "energy": 80.0,
+                "packaging": 98.0,
+                "transport": 90.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 5.215,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS009",
+            "sustainability_score": 61.6,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 65.0,
+                "waste": 84.0,
+                "energy": 40.0,
+                "packaging": 55.0,
+                "transport": 65.0,
+                "recyclability": 65.0,
+                "local_sourcing": 50.0
+            },
+            "estimated_carbon_kg_co2e": 13.303,
+            "recommendations": [
+                "Reduce production energy consumption.",
+                "Use recyclable or biodegradable packaging.",
+                "Prefer locally or regionally sourced materials."
+            ]
+        },
+        {
+            "product_id": "SUS010",
+            "sustainability_score": 91.45,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 95.0,
+                "waste": 93.33,
+                "energy": 75.0,
+                "packaging": 95.0,
+                "transport": 93.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 2.361,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS011",
+            "sustainability_score": 74.0,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 75.0,
+                "waste": 87.5,
+                "energy": 37.5,
+                "packaging": 90.0,
+                "transport": 90.0,
+                "recyclability": 65.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 5.315,
+            "recommendations": [
+                "Reduce production energy consumption."
+            ]
+        },
+        {
+            "product_id": "SUS012",
+            "sustainability_score": 85.02,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 90.0,
+                "waste": 88.64,
+                "energy": 76.14,
+                "packaging": 85.0,
+                "transport": 82.0,
+                "recyclability": 95.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 4.237,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS013",
+            "sustainability_score": 53.81,
+            "sustainability_level": "LOW",
+            "component_scores": {
+                "material": 65.0,
+                "waste": 80.0,
+                "energy": 43.75,
+                "packaging": 20.0,
+                "transport": 60.0,
+                "recyclability": 30.0,
+                "local_sourcing": 50.0
+            },
+            "estimated_carbon_kg_co2e": 20.56,
+            "recommendations": [
+                "Reduce production energy consumption.",
+                "Use recyclable or biodegradable packaging.",
+                "Improve recyclability of the final product.",
+                "Prefer locally or regionally sourced materials."
+            ]
+        },
+        {
+            "product_id": "SUS014",
+            "sustainability_score": 85.1,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 78.0,
+                "waste": 90.0,
+                "energy": 73.0,
+                "packaging": 85.0,
+                "transport": 91.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 4.913,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS015",
+            "sustainability_score": 76.67,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 75.0,
+                "waste": 83.33,
+                "energy": 45.83,
+                "packaging": 95.0,
+                "transport": 87.0,
+                "recyclability": 65.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 7.269,
+            "recommendations": [
+                "Reduce production energy consumption."
+            ]
+        },
+        {
+            "product_id": "SUS016",
+            "sustainability_score": 90.45,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 90.0,
+                "waste": 92.5,
+                "energy": 77.5,
+                "packaging": 98.0,
+                "transport": 91.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 3.713,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS017",
+            "sustainability_score": 72.62,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 65.0,
+                "waste": 82.86,
+                "energy": 44.29,
+                "packaging": 95.0,
+                "transport": 72.0,
+                "recyclability": 95.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 17.892,
+            "recommendations": [
+                "Reduce production energy consumption."
+            ]
+        },
+        {
+            "product_id": "SUS018",
+            "sustainability_score": 91.38,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 95.0,
+                "waste": 95.0,
+                "energy": 77.5,
+                "packaging": 85.0,
+                "transport": 95.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 2.907,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS019",
+            "sustainability_score": 58.75,
+            "sustainability_level": "LOW",
+            "component_scores": {
+                "material": 75.0,
+                "waste": 80.0,
+                "energy": 52.0,
+                "packaging": 20.0,
+                "transport": 68.0,
+                "recyclability": 30.0,
+                "local_sourcing": 50.0
+            },
+            "estimated_carbon_kg_co2e": 9.398,
+            "recommendations": [
+                "Reduce production energy consumption.",
+                "Use recyclable or biodegradable packaging.",
+                "Improve recyclability of the final product.",
+                "Prefer locally or regionally sourced materials."
+            ]
+        },
+        {
+            "product_id": "SUS020",
+            "sustainability_score": 81.21,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 90.0,
+                "waste": 87.5,
+                "energy": 75.89,
+                "packaging": 85.0,
+                "transport": 78.0,
+                "recyclability": 65.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 5.423,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS021",
+            "sustainability_score": 86.76,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 78.0,
+                "waste": 94.12,
+                "energy": 71.76,
+                "packaging": 95.0,
+                "transport": 92.5,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 3.441,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS022",
+            "sustainability_score": 65.75,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 65.0,
+                "waste": 83.93,
+                "energy": 41.07,
+                "packaging": 55.0,
+                "transport": 75.0,
+                "recyclability": 65.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 14.737,
+            "recommendations": [
+                "Reduce production energy consumption.",
+                "Use recyclable or biodegradable packaging."
+            ]
+        },
+        {
+            "product_id": "SUS023",
+            "sustainability_score": 76.85,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 75.0,
+                "waste": 86.67,
+                "energy": 45.0,
+                "packaging": 90.0,
+                "transport": 89.0,
+                "recyclability": 65.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 6.116,
+            "recommendations": [
+                "Reduce production energy consumption."
+            ]
+        },
+        {
+            "product_id": "SUS024",
+            "sustainability_score": 87.39,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 90.0,
+                "waste": 91.67,
+                "energy": 76.25,
+                "packaging": 98.0,
+                "transport": 86.0,
+                "recyclability": 95.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 4.601,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS025",
+            "sustainability_score": 91.69,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 95.0,
+                "waste": 93.85,
+                "energy": 74.62,
+                "packaging": 95.0,
+                "transport": 94.5,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 2.068,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS026",
+            "sustainability_score": 51.83,
+            "sustainability_level": "LOW",
+            "component_scores": {
+                "material": 65.0,
+                "waste": 78.12,
+                "energy": 34.38,
+                "packaging": 20.0,
+                "transport": 58.0,
+                "recyclability": 30.0,
+                "local_sourcing": 50.0
+            },
+            "estimated_carbon_kg_co2e": 17.863,
+            "recommendations": [
+                "Reduce production energy consumption.",
+                "Use recyclable or biodegradable packaging.",
+                "Consider shorter delivery routes or consolidated shipments.",
+                "Improve recyclability of the final product.",
+                "Prefer locally or regionally sourced materials."
+            ]
+        },
+        {
+            "product_id": "SUS027",
+            "sustainability_score": 73.49,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 75.0,
+                "waste": 84.09,
+                "energy": 48.86,
+                "packaging": 85.0,
+                "transport": 82.0,
+                "recyclability": 65.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 8.577,
+            "recommendations": [
+                "Reduce production energy consumption."
+            ]
+        },
+        {
+            "product_id": "SUS028",
+            "sustainability_score": 88.79,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 90.0,
+                "waste": 91.43,
+                "energy": 77.14,
+                "packaging": 85.0,
+                "transport": 90.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 3.935,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS029",
+            "sustainability_score": 85.48,
+            "sustainability_level": "HIGH",
+            "component_scores": {
+                "material": 78.0,
+                "waste": 88.89,
+                "energy": 73.33,
+                "packaging": 90.0,
+                "transport": 91.0,
+                "recyclability": 95.0,
+                "local_sourcing": 95.0
+            },
+            "estimated_carbon_kg_co2e": 5.263,
+            "recommendations": [
+                "Current sustainability profile is strong; maintain the existing practices."
+            ]
+        },
+        {
+            "product_id": "SUS030",
+            "sustainability_score": 71.38,
+            "sustainability_level": "MEDIUM",
+            "component_scores": {
+                "material": 65.0,
+                "waste": 83.33,
+                "energy": 37.5,
+                "packaging": 95.0,
+                "transport": 70.0,
+                "recyclability": 95.0,
+                "local_sourcing": 75.0
+            },
+            "estimated_carbon_kg_co2e": 16.295,
+            "recommendations": [
+                "Reduce production energy consumption."
+            ]
+        }
+    ]
+}

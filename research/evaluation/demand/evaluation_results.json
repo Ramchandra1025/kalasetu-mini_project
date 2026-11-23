@@ -1,0 +1,10 @@
+{
+    "test_samples": 6,
+    "mae": 1.5934524536132812,
+    "rmse": 2.3094712954649816,
+    "r2": 0.9613891663131388,
+    "mape": 1.641227218205625,
+    "data_type": "synthetic_pipeline_testing_data",
+    "research_valid": false,
+    "reason": "Current demand dataset is synthetic pipeline-testing data."
+}

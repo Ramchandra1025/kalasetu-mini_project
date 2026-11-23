@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#24483B"><title>KalaSetu | Buyer Dashboard</title>
+<meta name="description" content="Discover authentic handmade crafts from artisans across India on KalaSetu.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/global.css"><link rel="stylesheet" href="../css/buyer.css">
+<script defer src="../js/config.js"></script><script defer src="../js/api.js"></script><script defer src="../js/i18n.js"></script><script defer src="../js/buyer/buyer.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<div class="announce" role="note"><span class="announce-mark" aria-hidden="true">❖</span> Discover the craftsmanship behind every creation <span class="announce-sep" aria-hidden="true">·</span> <span class="announce-alt">Handcrafted traditions from across India</span></div>
+
+<div class="layout">
+<aside class="sidebar" id="sidebar" aria-label="Buyer navigation">
+<a class="brand" href="../index.html"><span class="brand-icon" aria-hidden="true">क</span><span><b>KalaSetu</b><small>Artisans · Heritage · You</small></span></a>
+<p class="nav-label">Discover</p>
+<nav>
+<button class="nav active" data-view="home"><i aria-hidden="true">⌂</i> <span>Home</span></button>
+<button class="nav" data-view="shop"><i aria-hidden="true">▦</i> <span>Shop by Category</span></button>
+<button class="nav" data-view="recommendations"><i aria-hidden="true">✧</i> <span>Recommendations</span></button>
+<button class="nav" data-view="wishlist"><i aria-hidden="true">♡</i> <span>Wishlist</span><em id="wishCount">0</em></button>
+<button class="nav" data-view="shared"><i aria-hidden="true">↗</i> <span>Shared Items</span></button>
+</nav>
+<p class="nav-label">Account</p>
+<nav>
+<button class="nav" data-view="orders"><i aria-hidden="true">▤</i> <span>My Orders</span></button>
+<button class="nav" data-view="tracking"><i aria-hidden="true">◉</i> <span>Track Order</span></button>
+<button class="nav" data-view="messages"><i aria-hidden="true">▱</i> <span>Messages</span></button>
+<button class="nav" data-view="profile"><i aria-hidden="true">♙</i> <span>Profile</span></button>
+<button class="nav" data-view="settings"><i aria-hidden="true">⚙</i> <span>Settings</span></button>
+</nav>
+<div class="sidebar-quote"><span aria-hidden="true">❧</span><p>Supporting artisans<br>builds a more<br>sustainable tomorrow.</p></div>
+</aside>
+<div class="scrim" id="scrim" aria-hidden="true"></div>
+
+<main>
+<header class="topbar">
+<button class="menu" id="menuBtn" aria-label="Open menu" aria-controls="sidebar">☰</button>
+<label class="search"><span aria-hidden="true">⌕</span> <input id="search" type="search" placeholder="Search handicrafts, artisans, regions…" aria-label="Search products"><kbd>Enter</kbd></label>
+<div class="top-right">
+<select id="language" aria-label="Language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="kn">ಕನ್ನಡ</option><option value="mr">मराठी</option></select>
+<button class="top-icon" data-view="wishlist" aria-label="Wishlist">♡<sup id="wishCountTop">0</sup></button>
+<button class="top-icon" data-view="cart" aria-label="Shopping bag">🛍<sup id="cartCount">0</sup></button>
+<button class="user" data-view="profile"><span class="avatar" id="avatar">B</span><span><b id="buyerName">Buyer</b><small>Buyer account</small></span></button>
+</div>
+</header>
+
+<div class="content" id="content">
+<section class="view" id="homeView">
+<div class="hero">
+<div class="hero-text">
+<p class="eyebrow">Handcrafted by artisans · Inspired by tradition</p>
+<h1>Timeless crafts,<br><em>modern lives</em></h1>
+<p>Discover unique handmade products from skilled artisans across India. Every purchase supports traditional craftsmanship and rural livelihoods.</p>
+<div class="hero-actions"><button class="primary" data-view="shop">Explore collections →</button><button class="ghost" data-view="recommendations">✧ Discover for me</button></div>
+</div>
+<div class="hero-media" aria-hidden="true"><img src="/assets/images/hero-crafts.jpg" alt=""></div>
+</div>
+
+<div class="section-head compact"><div><p class="kicker">Browse</p><h2>Shop by craft</h2></div></div>
+<div class="categories" id="categories"></div>
+
+<section class="section"><div class="section-head"><div><p class="kicker">Curated</p><h2>Featured products</h2><p>Thoughtfully made, ready to discover</p></div><button class="link" data-view="shop">View all →</button></div><div class="products" id="featured"></div></section>
+
+<section class="section ai-band"><div class="section-head"><div><p class="kicker">✧ AI-powered</p><h2>Recommended for you</h2><p>Based on your interests and recent activity on this device</p></div><button class="link" data-view="recommendations">View all →</button></div><div class="products" id="recommended"></div></section>
+
+<section class="section"><div class="section-head"><div><p class="kicker">Collections</p><h2>Explore by collection</h2><p>Find a craft that speaks to you</p></div></div><div class="collections" id="collections"></div></section>
+
+<section class="story">
+<div><p class="kicker">Behind every creation</p><h2>Made by hands that carry generations of skill</h2><p>Each piece on KalaSetu is listed by the artisan who made it. Open any product to learn about its craft, region and maker.</p><button class="outline" data-view="shop">Meet the makers →</button></div>
+<ul class="story-points"><li><b>Authentic</b><span>Listed directly by artisans</span></li><li><b>Traceable</b><span>Craft and region on every product</span></li><li><b>Fair</b><span>Purchases support craft communities</span></li></ul>
+</section>
+</section>
+
+<section class="view hidden" id="shopView"><div class="view-head"><p class="kicker">Catalogue</p><h1>Shop by category</h1><p>Explore authentic crafts from artisan communities across India.</p></div><div class="toolbar"><div id="filters" class="filters"></div><label class="sort-label">Sort <select id="sort"><option value="featured">Recommended</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select></label></div><div class="products" id="shopProducts"></div><p class="empty hidden" id="shopEmpty">No products found. Try another search.</p></section>
+
+<section class="view hidden" id="ordersView"><div class="panel"><p class="kicker">Account</p><h1>My orders</h1><p>Your purchases and their latest available status.</p><div id="orders"></div></div></section>
+
+<section class="view hidden" id="trackingView"><div class="panel"><p class="kicker">Account</p><h1>Track your order</h1><p>Enter an order ID to see its latest status.</p><form id="trackForm" class="tracking-form"><input id="orderId" placeholder="Order ID" aria-label="Order ID" required><button class="primary">Track order</button></form><div id="trackingResult"></div></div></section>
+
+<section class="view hidden" id="wishlistView"><div class="view-head"><p class="kicker">Saved</p><h1>Your wishlist</h1><p>Products you have saved.</p></div><div class="products" id="wishlistProducts"></div><p class="empty hidden" id="wishlistEmpty">Your wishlist is waiting for something special.</p></section>
+
+<section class="view hidden" id="sharedView"><div class="panel"><p class="kicker">Shared</p><h1>Shared items</h1><p>Products you have shared from this browser.</p><div class="products" id="sharedProducts"></div><p class="empty hidden" id="sharedEmpty">You haven't shared any products yet.</p></div></section>
+
+<section class="view hidden" id="recommendationsView"><div class="notice"><i aria-hidden="true">✧</i> <span><b>Your craft discovery feed</b><small>Recommendations use your activity on this device. Full personalisation will be connected to the backend.</small></span></div><div class="products" id="allRecommended"></div></section>
+
+<section class="view hidden" id="messagesView"><div class="panel"><p class="kicker">Inbox</p><h1>Messages &amp; enquiries</h1><p>Artisan conversations will appear here after the enquiry service is connected.</p><p class="empty">No conversations yet. Open a product and select Enquire.</p></div></section>
+
+<section class="view hidden" id="profileView"><div class="panel"><p class="kicker">Account</p><h1>Buyer profile</h1><p>Manage your buyer details and interests.</p><form id="profileForm" class="profile-form"><label>Full name<input id="name" placeholder="Your name"></label><label>Email<input id="email" type="email" placeholder="you@example.com"></label><label>Preferred craft<select id="interest"><option value="">Choose an interest</option><option>Textiles</option><option>Pottery</option><option>Wood Craft</option><option>Metal Craft</option><option>Jewellery</option></select></label><button class="primary">Save profile</button></form></div></section>
+
+<section class="view hidden" id="settingsView"><div class="panel"><p class="kicker">Preferences</p><h1>Settings</h1><label class="setting">Language<select id="settingsLanguage"><option value="en">English</option><option value="hi">हिन्दी</option><option value="kn">ಕನ್ನಡ</option><option value="mr">मराठी</option></select></label><label class="setting">Personalised recommendations<input id="personalisation" type="checkbox" checked></label><button class="primary" id="saveSettings">Save settings</button></div></section>
+
+<section class="view hidden" id="cartView"><div class="panel"><p class="kicker">Bag</p><h1>Your cart</h1><p>Review your selected handmade products.</p><div id="cartItems"></div><div class="cart-total" id="cartTotal"></div><button class="primary" id="checkout">Continue to checkout</button>
+<form id="checkoutForm" class="checkout-form hidden" aria-label="Delivery details">
+  <h2>Delivery details</h2>
+  <label>Full name<input id="deliveryName" type="text" placeholder="Your full name" required maxlength="100" autocomplete="name"></label>
+  <label>Phone<input id="deliveryPhone" type="tel" placeholder="10-digit mobile number" required maxlength="20" autocomplete="tel"></label>
+  <label>Address<textarea id="deliveryAddress" placeholder="Flat, street, area" required maxlength="1000" autocomplete="street-address" rows="2"></textarea></label>
+  <label>City<input id="deliveryCity" type="text" placeholder="City" required maxlength="100" autocomplete="address-level2"></label>
+  <label>State<input id="deliveryState" type="text" placeholder="State" required maxlength="100" autocomplete="address-level1"></label>
+  <label>PIN code<input id="deliveryPincode" type="text" pattern="[0-9]{6}" placeholder="6-digit PIN" required maxlength="6" inputmode="numeric" autocomplete="postal-code"></label>
+  <div class="checkout-btns"><button class="primary" id="placeOrder" type="button">Place order</button><button class="ghost" id="cancelCheckout" type="button">Cancel</button></div>
+  <small class="disclaimer">Payment processing is not yet connected. Orders are placed in test mode.</small>
+</form>
+</div></section>
+</div>
+<footer><span>© <span id="year"></span> KalaSetu</span><span>Celebrating craft. Connecting communities.</span></footer>
+</main>
+
+<aside class="rightbar" aria-label="Shortcuts">
+<section class="rail-card"><div class="rail-head"><i aria-hidden="true">◇</i> <b>Your orders</b><button class="link" data-view="orders">View all →</button></div><p class="rail-empty">Your latest order status will appear here once you place an order.</p><button class="outline full" data-view="tracking">Track an order</button></section>
+<section class="rail-card"><div class="rail-head"><i aria-hidden="true">◇</i> <b>Quick actions</b></div><button class="quick" data-view="tracking">◉ <span>Track order</span></button><button class="quick" data-view="wishlist">♡ <span>View wishlist</span></button><button class="quick" id="shareFeatured">↗ <span>Share a product</span></button><button class="quick" data-view="messages">☏ <span>Contact support</span></button></section>
+<section class="artisan-card"><div><small>Behind every creation</small><h2>Meet the artisan</h2><p>Every product carries a story, a skill and a dream.</p><button class="outline" data-view="shop">Explore crafts →</button></div></section>
+<section class="rail-card trust"><h3>Why KalaSetu?</h3><p>♡ <span><b>Authentic handmade products</b><small>Work listed by artisans</small></span></p><p>✧ <span><b>Artisan-first marketplace</b><small>Support craft communities</small></span></p><p>▣ <span><b>Order transparency</b><small>Status updates in one place</small></span></p><p>↻ <span><b>Helpful support</b><small>Help when you need it</small></span></p></section>
+</aside>
+</div>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-box"><button id="modalClose" class="modal-close" aria-label="Close">×</button><div id="modalContent"></div></div></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<script>
+/* Mobile drawer: works alongside buyer.js without changing it */
+(function(){var s=document.getElementById('sidebar'),b=document.getElementById('menuBtn'),c=document.getElementById('scrim');
+function t(o){s.classList.toggle('open',o);c.classList.toggle('show',o);}
+b.addEventListener('click',function(){t(!s.classList.contains('open'))});c.addEventListener('click',function(){t(false)});
+s.addEventListener('click',function(e){if(e.target.closest('[data-view]'))t(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')t(false)});})();
+</script>
+</body></html>

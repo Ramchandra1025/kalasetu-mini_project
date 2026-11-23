@@ -1,0 +1,11 @@
+{
+    "model": "XGBRegressor",
+    "task": "fair_price_regression",
+    "dataset_size": 30,
+    "train_size": 21,
+    "validation_size": 4,
+    "test_size": 5,
+    "feature_count": 21,
+    "research_valid": false,
+    "status": "training_completed"
+}

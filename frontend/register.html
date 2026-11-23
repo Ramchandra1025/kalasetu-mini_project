@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KalaSetu | Create Account</title>
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="brand">
+
+            <h1>KalaSetu</h1>
+
+            <p>
+                From artisan to the world.
+            </p>
+
+        </div>
+
+
+        <form id="registerForm">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Account Type
+                </label>
+
+                <div class="account-types">
+
+                    <label
+                        class="account-type selected"
+                        id="artisanOption"
+                    >
+
+                        <input
+                            type="radio"
+                            name="account_type"
+                            value="artisan"
+                            checked
+                        >
+
+                        🧑‍🎨 Artisan
+
+                    </label>
+
+
+                    <label
+                        class="account-type"
+                        id="buyerOption"
+                    >
+
+                        <input
+                            type="radio"
+                            name="account_type"
+                            value="buyer"
+                        >
+
+                        🛍️ Buyer
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="language">
+                    Preferred Language
+                </label>
+
+                <select id="language">
+
+                    <option value="English">
+                        English
+                    </option>
+
+                    <option value="Hindi">
+                        Hindi
+                    </option>
+
+                    <option value="Kannada">
+                        Kannada
+                    </option>
+
+                    <option value="Tamil">
+                        Tamil
+                    </option>
+
+                    <option value="Telugu">
+                        Telugu
+                    </option>
+
+                    <option value="Marathi">
+                        Marathi
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Minimum 8 characters"
+                    minlength="8"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Repeat password"
+                    minlength="8"
+                    required
+                >
+
+            </div>
+
+
+            <div
+                id="registerMessage"
+                class="message"
+            ></div>
+
+
+            <button type="submit">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+
+        <div class="login-link">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="/js/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+    "model_name": "Speech Recognition + Language Detection",
+    "model_version": "1.0.0",
+    "speech_backend": "Google Speech Recognition",
+    "language_backend": "langdetect",
+    "dataset_type": "synthetic",
+    "research_valid": false,
+    "created_at": "2026-10-08T20:06:26.362114+00:00",
+    "description": "Prototype voice and language intelligence baseline for KalaSetu."
+}

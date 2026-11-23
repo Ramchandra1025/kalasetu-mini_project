@@ -1,0 +1,74 @@
+{
+    "model": "XGBRegressor",
+    "model_name": "xgboost_demand_regressor",
+    "model_version": "1.0.0",
+    "target": "future_demand",
+    "train_samples": 28,
+    "validation_samples": 6,
+    "feature_count": 15,
+    "feature_importance": [
+        {
+            "feature": "previous_demand",
+            "importance": 0.49354618787765503
+        },
+        {
+            "feature": "historical_demand",
+            "importance": 0.3889997601509094
+        },
+        {
+            "feature": "region_maharashtra",
+            "importance": 0.05906703695654869
+        },
+        {
+            "feature": "region_rajasthan",
+            "importance": 0.015910567715764046
+        },
+        {
+            "feature": "region_gujarat",
+            "importance": 0.010890774428844452
+        },
+        {
+            "feature": "region_karnataka",
+            "importance": 0.008620820939540863
+        },
+        {
+            "feature": "price",
+            "importance": 0.007394978776574135
+        },
+        {
+            "feature": "product_category_wood_craft",
+            "importance": 0.0052872528322041035
+        },
+        {
+            "feature": "product_category_textile",
+            "importance": 0.0026209792122244835
+        },
+        {
+            "feature": "month",
+            "importance": 0.0025996174663305283
+        },
+        {
+            "feature": "demand_growth",
+            "importance": 0.001682918518781662
+        },
+        {
+            "feature": "product_category_pottery",
+            "importance": 0.0016320854192599654
+        },
+        {
+            "feature": "product_category_metal_craft",
+            "importance": 0.001216924749314785
+        },
+        {
+            "feature": "season_spring",
+            "importance": 0.0005301240598782897
+        },
+        {
+            "feature": "season_winter",
+            "importance": 0.0
+        }
+    ],
+    "data_type": "synthetic_pipeline_testing_data",
+    "research_valid": false,
+    "research_note": "Current demand dataset is synthetic pipeline-testing data. Metrics must not be presented as research-valid performance."
+}

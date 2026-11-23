@@ -1,0 +1,172 @@
+{
+    "total_records": 24,
+    "average_score": 80.05208333333333,
+    "high_opportunities": 19,
+    "medium_opportunities": 5,
+    "low_opportunities": 0,
+    "top_markets": [
+        {
+            "product_category": "metal_craft",
+            "region": "rajasthan",
+            "opportunity_score": 89.65,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 28.2,
+                "price_opportunity": 18.4,
+                "market_growth": 13.5,
+                "regional_fit": 14.25,
+                "seasonality_score": 9.1,
+                "competition_score": 6.2
+            },
+            "rank": 1
+        },
+        {
+            "product_category": "textile",
+            "region": "west_bengal",
+            "opportunity_score": 88.2,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 28.2,
+                "price_opportunity": 17.2,
+                "market_growth": 13.65,
+                "regional_fit": 13.95,
+                "seasonality_score": 9.2,
+                "competition_score": 6.0
+            },
+            "rank": 2
+        },
+        {
+            "product_category": "textile",
+            "region": "rajasthan",
+            "opportunity_score": 87.0,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 27.6,
+                "price_opportunity": 17.6,
+                "market_growth": 12.9,
+                "regional_fit": 14.1,
+                "seasonality_score": 9.0,
+                "competition_score": 5.8
+            },
+            "rank": 3
+        },
+        {
+            "product_category": "textile",
+            "region": "gujarat",
+            "opportunity_score": 86.95,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 27.0,
+                "price_opportunity": 18.2,
+                "market_growth": 13.35,
+                "regional_fit": 14.4,
+                "seasonality_score": 8.8,
+                "competition_score": 5.2
+            },
+            "rank": 4
+        },
+        {
+            "product_category": "metal_craft",
+            "region": "gujarat",
+            "opportunity_score": 85.4,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 26.7,
+                "price_opportunity": 17.6,
+                "market_growth": 13.05,
+                "regional_fit": 13.95,
+                "seasonality_score": 8.6,
+                "competition_score": 5.5
+            },
+            "rank": 5
+        },
+        {
+            "product_category": "textile",
+            "region": "tamil_nadu",
+            "opportunity_score": 85.35,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 27.3,
+                "price_opportunity": 17.4,
+                "market_growth": 12.75,
+                "regional_fit": 14.1,
+                "seasonality_score": 8.7,
+                "competition_score": 5.1
+            },
+            "rank": 6
+        },
+        {
+            "product_category": "metal_craft",
+            "region": "tamil_nadu",
+            "opportunity_score": 84.7,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 26.1,
+                "price_opportunity": 18.0,
+                "market_growth": 12.9,
+                "regional_fit": 14.1,
+                "seasonality_score": 8.8,
+                "competition_score": 4.8
+            },
+            "rank": 7
+        },
+        {
+            "product_category": "textile",
+            "region": "kerala",
+            "opportunity_score": 82.5,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 26.4,
+                "price_opportunity": 16.8,
+                "market_growth": 12.3,
+                "regional_fit": 13.5,
+                "seasonality_score": 8.9,
+                "competition_score": 4.6
+            },
+            "rank": 8
+        },
+        {
+            "product_category": "metal_craft",
+            "region": "kerala",
+            "opportunity_score": 81.9,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 24.6,
+                "price_opportunity": 17.8,
+                "market_growth": 12.6,
+                "regional_fit": 13.8,
+                "seasonality_score": 9.0,
+                "competition_score": 4.1
+            },
+            "rank": 9
+        },
+        {
+            "product_category": "pottery",
+            "region": "rajasthan",
+            "opportunity_score": 81.6,
+            "opportunity_level": "HIGH",
+            "explanation": "strong predicted demand; strong price opportunity; strong market growth; strong regional product fit; favorable seasonal conditions",
+            "factor_contributions": {
+                "demand_score": 25.8,
+                "price_opportunity": 16.4,
+                "market_growth": 12.6,
+                "regional_fit": 13.8,
+                "seasonality_score": 8.5,
+                "competition_score": 4.5
+            },
+            "rank": 10
+        }
+    ],
+    "data_type": "synthetic_pipeline_testing_data",
+    "research_valid": false,
+    "research_note": "Market opportunity scores are rule-based prototype scores using synthetic inputs. They must not be interpreted as validated market research."
+}

@@ -1,0 +1,9 @@
+{
+    "total_samples": 8,
+    "category_accuracy": 87.5,
+    "average_ocr_confidence": 95.26,
+    "average_text_similarity": 97.22,
+    "dataset_type": "synthetic",
+    "research_valid": false,
+    "note": "Evaluation uses controlled synthetic images. These results validate the pipeline, not real-world OCR accuracy."
+}

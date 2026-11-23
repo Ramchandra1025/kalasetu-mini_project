@@ -1,0 +1,91 @@
+{
+    "summary": {
+        "total_samples": 8,
+        "language_accuracy": 100.0,
+        "intent_accuracy": 100.0,
+        "research_valid": false,
+        "dataset_type": "controlled synthetic examples"
+    },
+    "results": [
+        {
+            "id": "VOICE001",
+            "text": "This is a handcrafted wooden wall decoration made by an artisan",
+            "expected_language": "en",
+            "detected_language": "en",
+            "expected_intent": "product_information",
+            "detected_intent": "product_information",
+            "language_correct": true,
+            "intent_correct": true
+        },
+        {
+            "id": "VOICE002",
+            "text": "हस्तशिल्प उत्पाद की कीमत क्या है",
+            "expected_language": "hi",
+            "detected_language": "hi",
+            "expected_intent": "pricing",
+            "detected_intent": "pricing",
+            "language_correct": true,
+            "intent_correct": true
+        },
+        {
+            "id": "VOICE003",
+            "text": "ಕರಕುಶಲ ಉತ್ಪನ್ನದ ಬೆಲೆ ಎಷ್ಟು",
+            "expected_language": "kn",
+            "detected_language": "kn",
+            "expected_intent": "pricing",
+            "detected_intent": "pricing",
+            "language_correct": true,
+            "intent_correct": true
+        },
+        {
+            "id": "VOICE004",
+            "text": "The artisan wants to know the market opportunity for this craft",
+            "expected_language": "en",
+            "detected_language": "en",
+            "expected_intent": "market",
+            "detected_intent": "market",
+            "language_correct": true,
+            "intent_correct": true
+        },
+        {
+            "id": "VOICE005",
+            "text": "हस्तशिल्प कारीगर बाजार की जानकारी चाहते हैं",
+            "expected_language": "hi",
+            "detected_language": "hi",
+            "expected_intent": "market",
+            "detected_intent": "market",
+            "language_correct": true,
+            "intent_correct": true
+        },
+        {
+            "id": "VOICE006",
+            "text": "Handmade pottery product",
+            "expected_language": "en",
+            "detected_language": "en",
+            "expected_intent": "product_information",
+            "detected_intent": "product_information",
+            "language_correct": true,
+            "intent_correct": true
+        },
+        {
+            "id": "VOICE007",
+            "text": "Handwoven textile product",
+            "expected_language": "en",
+            "detected_language": "en",
+            "expected_intent": "product_information",
+            "detected_intent": "product_information",
+            "language_correct": true,
+            "intent_correct": true
+        },
+        {
+            "id": "VOICE008",
+            "text": "The market price of this craft",
+            "expected_language": "en",
+            "detected_language": "en",
+            "expected_intent": "pricing",
+            "detected_intent": "pricing",
+            "language_correct": true,
+            "intent_correct": true
+        }
+    ]
+}

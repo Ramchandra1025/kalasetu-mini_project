@@ -1,0 +1,905 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#245447" />
+  <meta name="description"
+    content="KalaSetu Artisan Studio — manage handmade products, discover markets and grow your craft business." />
+
+  <title>Artisan Studio | KalaSetu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/artisan-dashboard.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../js/artisan/artisan-dashboard.js" defer></script>
+<script src="../js/artisan/artisan-ai-tools.js" defer></script>
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <a href="#overview" class="brand">
+        <span class="brand-mark"><i data-lucide="sprout"></i></span>
+        <span class="brand-copy">
+          <strong>KalaSetu</strong>
+          <small>ARTISAN STUDIO</small>
+        </span>
+      </a>
+
+      <div class="workspace-label">WORKSPACE</div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview">
+          <i data-lucide="layout-dashboard"></i><span>Overview</span>
+        </button>
+        <button class="nav-item" data-view="products">
+          <i data-lucide="package"></i><span>My products</span>
+          <span class="nav-count" id="navProductCount">0</span>
+        </button>
+        <button class="nav-item" data-view="ai-studio">
+          <i data-lucide="sparkles"></i><span>AI Studio</span>
+          <span class="nav-dot"></span>
+        </button>
+        <button class="nav-item" data-view="markets">
+          <i data-lucide="chart-no-axes-combined"></i><span>Market intelligence</span>
+        </button>
+        <button class="nav-item" data-view="buyers">
+          <i data-lucide="users-round"></i><span>Buyers &amp; enquiries</span>
+        </button>
+        <button class="nav-item" data-view="orders">
+          <i data-lucide="shopping-bag"></i><span>Orders</span>
+        </button>
+        <button class="nav-item" data-view="inventory">
+          <i data-lucide="boxes"></i><span>Inventory &amp; production</span>
+        </button>
+        <button class="nav-item" data-view="sustainability">
+          <i data-lucide="recycle"></i><span>Sustainability</span>
+        </button>
+        <button class="nav-item" data-view="analytics">
+          <i data-lucide="chart-no-axes-column"></i><span>Business analytics</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <span class="upgrade-icon"><i data-lucide="lightbulb"></i></span>
+          <strong>Your next opportunity</strong>
+          <p>Explore new ways to showcase your craft to the right buyers.</p>
+          <button class="text-action" data-go="markets">
+            Explore opportunities <i data-lucide="arrow-up-right"></i>
+          </button>
+        </div>
+
+        <button class="nav-item" data-view="profile">
+          <i data-lucide="user-round"></i><span>My craft profile</span>
+        </button>
+        <button class="nav-item" data-view="settings">
+          <i data-lucide="settings-2"></i><span>Settings &amp; help</span>
+        </button>
+
+        <div class="sidebar-profile">
+          <div class="avatar">A</div>
+          <div class="profile-copy">
+            <strong id="sidebarName">Artisan</strong>
+            <small id="sidebarCraft">Your craft</small>
+          </div>
+          <button class="icon-button" id="profileMenu" aria-label="Profile menu">
+            <i data-lucide="ellipsis"></i>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button menu-toggle" id="menuToggle"
+            aria-label="Open navigation">
+            <i data-lucide="menu"></i>
+          </button>
+          <div class="breadcrumb">
+            Workspace <span>/</span>
+            <strong id="breadcrumbCurrent">Overview</strong>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <i data-lucide="search"></i>
+            <input id="globalSearch" type="search"
+              placeholder="Search products, tools..."
+              aria-label="Search dashboard" />
+            <kbd>/</kbd>
+          </label>
+          <button class="icon-button notification-button" id="notificationsButton"
+            aria-label="Notifications">
+            <i data-lucide="bell"></i><span></span>
+          </button>
+          <button class="topbar-user" data-view="profile">
+            <div class="avatar avatar-small">A</div>
+            <span id="sidebarShortName">Artisan</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div class="page-content">
+
+        <!-- OVERVIEW -->
+        <section class="page-view active" id="view-overview">
+          <div class="welcome-row">
+            <div>
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span> YOUR ARTISAN WORKSPACE
+              </div>
+              <h1 id="welcomeTitle">Welcome <span class="wave">✳</span></h1>
+              <p class="muted">Let's grow your craft business, one opportunity at a time.</p>
+            </div>
+            <div class="welcome-actions">
+              <button class="button button-outline" data-go="markets">
+                <i data-lucide="compass"></i> Explore markets
+              </button>
+              <button class="button button-primary" data-action="add-product">
+                <i data-lucide="plus"></i> Add a product
+              </button>
+            </div>
+          </div>
+
+          <section class="hero-card">
+            <div class="hero-copy">
+              <span class="hero-label">
+                <i data-lucide="sparkles"></i> MADE FOR YOUR CRAFT
+              </span>
+              <h2>Your craft deserves<br />a <em>wider market.</em></h2>
+              <p>
+                Bring your products to life, discover potential buyers and make
+                informed decisions with AI-assisted tools built around your craft.
+              </p>
+              <button class="button button-light" data-go="ai-studio">
+                Open AI Studio <i data-lucide="arrow-up-right"></i>
+              </button>
+              <div class="hero-footnote">
+                <i data-lucide="shield-check"></i>
+                Your craft. Your decisions. Your business.
+              </div>
+            </div>
+            <div class="hero-art">
+              <img
+                src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=1000&q=85"
+                alt="Handcrafted home decor and artisan objects"
+                onerror="this.style.display='none'" />
+              <div class="hero-image-caption">
+                <span class="caption-mark"><i data-lucide="flower-2"></i></span>
+                <span>
+                  <strong>Rooted in tradition</strong>
+                  <small>Ready for new possibilities</small>
+                </span>
+              </div>
+              <div class="hero-stamp">
+                <i data-lucide="sprout"></i>
+                <span>MADE<br />WITH<br />MEANING</span>
+              </div>
+            </div>
+            <div class="hero-decoration"></div>
+          </section>
+
+          <div class="section-heading metrics-heading">
+            <div>
+              <h2>Your business at a glance</h2>
+              <p>Keep track of what matters today.</p>
+            </div>
+            <span class="updated-label">
+              <i data-lucide="refresh-cw"></i> Dashboard summary
+            </span>
+          </div>
+
+          <section class="metrics-grid">
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-icon green"><i data-lucide="package"></i></span>
+                <span class="metric-label">CATALOGUE</span>
+              </div>
+              <div class="metric-value" id="metricProducts">—</div>
+              <div class="metric-bottom">
+                <span>My products</span>
+                <button data-go="products">View <i data-lucide="arrow-up-right"></i></button>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-icon terracotta"><i data-lucide="messages-square"></i></span>
+                <span class="metric-label">BUYER ACTIVITY</span>
+              </div>
+              <div class="metric-value" id="metricEnquiries">—</div>
+              <div class="metric-bottom">
+                <span>Open enquiries</span>
+                <button data-go="buyers">Review <i data-lucide="arrow-up-right"></i></button>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-icon brass"><i data-lucide="shopping-bag"></i></span>
+                <span class="metric-label">FULFILMENT</span>
+              </div>
+              <div class="metric-value" id="metricOrders">—</div>
+              <div class="metric-bottom">
+                <span>Active orders</span>
+                <button data-go="orders">Manage <i data-lucide="arrow-up-right"></i></button>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-icon sage"><i data-lucide="telescope"></i></span>
+                <span class="metric-label">DISCOVERY</span>
+              </div>
+              <div class="metric-value" id="metricOpportunities">—</div>
+              <div class="metric-bottom">
+                <span>Market opportunities</span>
+                <button data-go="markets">Explore <i data-lucide="arrow-up-right"></i></button>
+              </div>
+            </article>
+          </section>
+
+          <div class="content-grid">
+            <section class="panel insight-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="section-kicker">INTELLIGENCE FOR YOUR CRAFT</span>
+                  <h2>Market insight</h2>
+                </div>
+                <span class="ai-chip"><i data-lucide="sparkles"></i> AI insights</span>
+              </div>
+              <div class="insight-content">
+                <div class="insight-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=700&q=80"
+                    alt="Artisan textile and natural craft materials"
+                    onerror="this.style.display='none'" />
+                  <span class="image-tag">CRAFT SPOTLIGHT</span>
+                </div>
+                <div class="insight-copy">
+                  <span class="opportunity-label"><span></span> OPPORTUNITY TO EXPLORE</span>
+                  <h3>Find the right audience for your craft.</h3>
+                  <p>
+                    Use product details, available market signals and buyer preferences
+                    to discover where your work may fit.
+                  </p>
+                  <button class="text-action" data-go="markets">
+                    Explore recommendations <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="insight-footer">
+                <i data-lucide="info"></i>
+                Recommendations depend on available data. Review suggestions before
+                making business decisions.
+              </div>
+            </section>
+
+            <section class="panel next-steps-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="section-kicker">A LITTLE PROGRESS EVERY DAY</span>
+                  <h2>Your next steps</h2>
+                </div>
+                <span class="steps-count" id="stepsCount">3 tasks</span>
+              </div>
+              <div class="task-list" id="taskList">
+                <label class="task-item">
+                  <input type="checkbox" />
+                  <span class="task-check"><i data-lucide="check"></i></span>
+                  <span class="task-copy">
+                    <strong>Complete your craft profile</strong>
+                    <small>Help buyers understand your story.</small>
+                  </span>
+                  <i data-lucide="chevron-right" class="task-arrow"></i>
+                </label>
+                <label class="task-item">
+                  <input type="checkbox" />
+                  <span class="task-check"><i data-lucide="check"></i></span>
+                  <span class="task-copy">
+                    <strong>Review new enquiries</strong>
+                    <small>Stay connected with potential buyers.</small>
+                  </span>
+                  <i data-lucide="chevron-right" class="task-arrow"></i>
+                </label>
+                <label class="task-item">
+                  <input type="checkbox" />
+                  <span class="task-check"><i data-lucide="check"></i></span>
+                  <span class="task-copy">
+                    <strong>Review your product details</strong>
+                    <small>Keep prices and stock information current.</small>
+                  </span>
+                  <i data-lucide="chevron-right" class="task-arrow"></i>
+                </label>
+              </div>
+              <div class="profile-completion">
+                <div class="completion-heading">
+                  <span>Workspace checklist</span>
+                  <strong id="completionText">0 of 3</strong>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" id="completionBar"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section class="panel products-panel">
+            <div class="section-heading product-heading">
+              <div>
+                <span class="section-kicker">YOUR CREATIONS</span>
+                <h2>Recent products</h2>
+                <p>Manage the handmade pieces you share with the world.</p>
+              </div>
+              <button class="button button-outline" data-go="products">
+                View all products <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+            <div class="product-grid" id="recentProducts"></div>
+          </section>
+
+          <section class="bottom-grid">
+            <div class="panel activity-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="section-kicker">YOUR WORKSPACE</span>
+                  <h2>Recent activity</h2>
+                </div>
+              </div>
+              <div id="activityList" class="activity-list">
+                <div class="empty-state">
+                  <i data-lucide="activity"></i>
+                  <p>Activity will appear here when connected to your account.</p>
+                </div>
+              </div>
+            </div>
+            <div class="panel profile-prompt">
+              <div class="prompt-icon"><i data-lucide="heart-handshake"></i></div>
+              <span class="section-kicker">THE STORY BEHIND THE CRAFT</span>
+              <h2>Let buyers meet the maker.</h2>
+              <p>Your story, your process and your inspiration make every handmade piece more meaningful.</p>
+              <button class="button button-primary" data-go="profile">
+                Build your craft profile <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </section>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="page-view" id="view-products">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">YOUR CATALOGUE</span>
+              <h1>My products</h1>
+              <p class="muted">Every piece has a story. Give each one a place to shine.</p>
+            </div>
+            <button class="button button-primary" data-action="add-product">
+              <i data-lucide="plus"></i> Add a product
+            </button>
+          </div>
+          <div class="panel filters-panel">
+            <label class="search-box product-search">
+              <i data-lucide="search"></i>
+              <input id="productSearch" placeholder="Search your products..." />
+              <kbd>/</kbd>
+            </label>
+            <select id="productStatusFilter" aria-label="Filter by product status">
+              <option value="all">All statuses</option>
+              <option value="published">Published</option>
+              <option value="draft">Draft</option>
+            </select>
+            <select id="productSort" aria-label="Sort products">
+              <option value="recent">Recently added</option>
+              <option value="name">Name A–Z</option>
+              <option value="price">Price: low to high</option>
+            </select>
+          </div>
+          <div class="product-grid product-grid-full" id="allProducts"></div>
+          <div id="productEmpty" class="empty-state hidden">
+            <i data-lucide="package-open"></i>
+            <h3>No products found</h3>
+            <p>Try a different search or add your first product.</p>
+            <button class="button button-primary" data-action="add-product">Add a product</button>
+          </div>
+        </section>
+
+        <!-- AI STUDIO -->
+        <section class="page-view" id="view-ai-studio">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">YOUR CREATIVE ASSISTANT</span>
+              <h1>AI Studio</h1>
+              <p class="muted">Tools to help you present, price and market your craft.</p>
+            </div>
+          </div>
+
+          <div class="ai-welcome panel">
+            <div class="ai-orb"><i data-lucide="sparkles"></i></div>
+            <div>
+              <span class="section-kicker">16 AI CAPABILITIES</span>
+              <h2>Technology that supports your craft.</h2>
+              <p>
+                Choose a tool for the task you want to complete. AI suggestions
+                should support your expertise, not replace it.
+              </p>
+            </div>
+          </div>
+
+          <div class="ai-tools-grid" id="aiToolsGrid"></div>
+
+          <div class="panel integration-note">
+            <i data-lucide="info"></i>
+            <div>
+              <strong>AI service availability</strong>
+              <p>
+                Each tool must be connected to its corresponding backend service.
+                A tool marked as planned or prototype should not be presented as
+                a verified production result.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAIR PRICING ASSISTANT: SEPARATE PAGE VIEW -->
+        <section class="page-view" id="view-pricing">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">ARTISAN PRICING</span>
+              <h1>Fair Pricing Assistant</h1>
+              <p class="muted">
+                Estimate a suggested price using production costs and product details.
+              </p>
+            </div>
+            <button class="button button-outline" data-go="ai-studio">
+              <i data-lucide="arrow-left"></i> Back to AI Studio
+            </button>
+          </div>
+
+          <div class="panel pricing-panel">
+            <form id="pricingForm">
+              <div class="pricing-form-grid">
+                <label>
+                  Craft category
+                  <select name="craft_category" required>
+                    <option value="">Choose category</option>
+                    <option value="metal_craft">Metal craft</option>
+                    <option value="pottery">Pottery</option>
+                    <option value="textile">Textile</option>
+                    <option value="wood_craft">Wood craft</option>
+                  </select>
+                </label>
+
+                <label>
+                  Primary material
+                  <select name="material" required>
+                    <option value="">Choose material</option>
+                    <option value="clay">Clay</option>
+                    <option value="cotton">Cotton</option>
+                    <option value="metal">Metal</option>
+                    <option value="wood">Wood</option>
+                  </select>
+                </label>
+
+                <label>
+                  Production region
+                  <select name="region" required>
+                    <option value="">Choose region</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="tamil nadu">Tamil Nadu</option>
+                    <option value="west bengal">West Bengal</option>
+                  </select>
+                </label>
+
+                <label>
+                  Product size (cm)
+                  <input name="size_cm" type="number" min="0.1" step="any" required />
+                </label>
+
+                <label>
+                  Production time (hours)
+                  <input name="production_hours" type="number" min="0.1" step="any" required />
+                </label>
+
+                <label>
+                  Material cost (₹)
+                  <input name="material_cost" type="number" min="0" step="any" required />
+                </label>
+
+                <label>
+                  Labour cost (₹)
+                  <input name="labor_cost" type="number" min="0" step="any" required />
+                </label>
+
+                <label>
+                  Demand score (0–100)
+                  <input name="demand_score" type="number" min="0" max="100" step="any" required />
+                </label>
+
+                <label>
+                  Complexity score (0–100)
+                  <input name="complexity_score" type="number" min="0" max="100" step="any" required />
+                </label>
+              </div>
+
+              <p class="muted">
+                Demand and complexity scores are inputs you provide. They are
+                not automatically measured by this pricing model.
+              </p>
+
+              <button class="button button-primary" type="submit" id="pricingSubmit">
+                Estimate suggested price
+              </button>
+            </form>
+
+            <div id="pricingResult" class="pricing-result" aria-live="polite" hidden></div>
+
+            <p class="pricing-warning">
+              Experimental estimate: this model was trained on synthetic
+              pipeline-testing data. Do not treat its output as a verified
+              market price or research finding.
+            </p>
+          </div>
+        </section>
+
+        <!-- MARKET INTELLIGENCE -->
+        <section class="page-view" id="view-markets">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">GROW YOUR REACH</span>
+              <h1>Market intelligence</h1>
+              <p class="muted">Explore potential demand, pricing context and market opportunities.</p>
+            </div>
+          </div>
+
+          <div class="placeholder-grid">
+            <article class="feature-card">
+              <span class="metric-icon green"><i data-lucide="trending-up"></i></span>
+              <h3>Demand prediction</h3>
+              <p>Explore demand estimates with time periods, data sources and limitations.</p>
+              <button class="text-action" data-tool="demand">
+                Open demand tool <i data-lucide="arrow-right"></i>
+              </button>
+            </article>
+            <article class="feature-card">
+              <span class="metric-icon terracotta"><i data-lucide="compass"></i></span>
+              <h3>Market opportunities</h3>
+              <p>Review potential markets and why they may be relevant to your products.</p>
+              <button class="text-action" data-tool="market">
+                Explore opportunities <i data-lucide="arrow-right"></i>
+              </button>
+            </article>
+            <article class="feature-card">
+              <span class="metric-icon brass"><i data-lucide="users-round"></i></span>
+              <h3>Buyer matching</h3>
+              <p>Find potentially suitable buyers based on product details and requirements.</p>
+              <button class="text-action" data-tool="buyers">
+                Explore matching <i data-lucide="arrow-right"></i>
+              </button>
+            </article>
+            <article class="feature-card">
+              <span class="metric-icon sage"><i data-lucide="indian-rupee"></i></span>
+              <h3>Fair pricing</h3>
+              <p>Compare cost assumptions with experimental model-supported price guidance.</p>
+              <button class="text-action" data-tool="pricing">
+                Open pricing <i data-lucide="arrow-right"></i>
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <!-- BUYERS -->
+        <section class="page-view" id="view-buyers">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">BUILD RELATIONSHIPS</span>
+              <h1>Buyers &amp; enquiries</h1>
+              <p class="muted">Review buyer messages, requests and follow-ups.</p>
+            </div>
+          </div>
+          <div class="panel empty-state">
+            <i data-lucide="messages-square"></i>
+            <h3>Connect your enquiry inbox</h3>
+            <p>
+              Buyer enquiries will appear here once the corresponding backend
+              endpoint and database records are connected.
+            </p>
+          </div>
+        </section>
+
+        <!-- ORDERS -->
+        <section class="page-view" id="view-orders">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">FULFILMENT</span>
+              <h1>Orders</h1>
+              <p class="muted">Track confirmed orders, quantities and delivery progress.</p>
+            </div>
+          </div>
+          <div class="panel empty-state">
+            <i data-lucide="shopping-bag"></i>
+            <h3>Your order workspace</h3>
+            <p>Connect real order records to track fulfilment here.</p>
+          </div>
+        </section>
+
+        <!-- INVENTORY -->
+        <section class="page-view" id="view-inventory">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">PLAN WITH CONFIDENCE</span>
+              <h1>Inventory &amp; production</h1>
+              <p class="muted">Keep track of stock, materials and production capacity.</p>
+            </div>
+          </div>
+          <div class="placeholder-grid">
+            <article class="feature-card">
+              <i data-lucide="boxes"></i>
+              <h3>Stock intelligence</h3>
+              <p>Monitor available quantities and low-stock risks.</p>
+            </article>
+            <article class="feature-card">
+              <i data-lucide="calendar-clock"></i>
+              <h3>Production planning</h3>
+              <p>Review capacity and lead-time estimates for potential orders.</p>
+            </article>
+            <article class="feature-card">
+              <i data-lucide="truck"></i>
+              <h3>Logistics guidance</h3>
+              <p>Plan fulfilment with suitable transport and packaging information.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- SUSTAINABILITY -->
+        <section class="page-view" id="view-sustainability">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">MAKE WITH PURPOSE</span>
+              <h1>Sustainability</h1>
+              <p class="muted">Explore material use, waste reduction and responsible production.</p>
+            </div>
+          </div>
+          <div class="placeholder-grid">
+            <article class="feature-card">
+              <i data-lucide="recycle"></i>
+              <h3>Waste-to-product ideas</h3>
+              <p>Explore possible uses for leftover craft materials.</p>
+            </article>
+            <article class="feature-card">
+              <i data-lucide="leaf"></i>
+              <h3>Sustainability insights</h3>
+              <p>Review model-supported indicators and their underlying assumptions.</p>
+            </article>
+            <article class="feature-card">
+              <i data-lucide="shield-check"></i>
+              <h3>Craft trust &amp; provenance</h3>
+              <p>Explore verification evidence and product passport information.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ANALYTICS -->
+        <section class="page-view" id="view-analytics">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">UNDERSTAND YOUR BUSINESS</span>
+              <h1>Business analytics</h1>
+              <p class="muted">Use recorded activity to understand how your craft business is progressing.</p>
+            </div>
+          </div>
+          <div class="panel empty-state">
+            <i data-lucide="chart-no-axes-combined"></i>
+            <h3>Analytics will grow with your data</h3>
+            <p>
+              Views, enquiries, orders and revenue should be displayed after
+              their events and calculations are connected.
+            </p>
+          </div>
+        </section>
+
+        <!-- PROFILE -->
+        <section class="page-view" id="view-profile">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">THE PERSON BEHIND THE CRAFT</span>
+              <h1>My craft profile</h1>
+              <p class="muted">Share your identity, craft tradition and story with potential buyers.</p>
+            </div>
+          </div>
+          <div class="panel profile-editor">
+            <div class="profile-large-avatar" id="profileAvatar">A</div>
+            <div class="profile-fields">
+              <label>
+                Artisan name
+                <input id="profileName" placeholder="Your artisan name" />
+              </label>
+              <label>
+                Craft specialisation
+                <input id="profileCraft" placeholder="Your craft specialisation" />
+              </label>
+              <label>
+                Location
+                <input id="profileLocation" placeholder="Village, district, state" />
+              </label>
+              <label>
+                About your craft
+                <textarea id="profileStory" rows="4"
+                  placeholder="Tell buyers about your craft, techniques, materials and inspiration."></textarea>
+              </label>
+              <button class="button button-primary" id="saveProfile">Save profile</button>
+              <p class="muted small">
+                Update your artisan profile and share your craft with potential buyers.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="page-view" id="view-settings">
+          <div class="page-title-row">
+            <div>
+              <span class="eyebrow">YOUR PREFERENCES</span>
+              <h1>Settings &amp; help</h1>
+              <p class="muted">Make your workspace more comfortable and accessible.</p>
+            </div>
+          </div>
+          <div class="placeholder-grid">
+            <article class="feature-card">
+              <i data-lucide="languages"></i>
+              <h3>Language preferences</h3>
+              <p>Multilingual support will use the available language service.</p>
+            </article>
+            <article class="feature-card">
+              <i data-lucide="accessibility"></i>
+              <h3>Accessibility</h3>
+              <p>Responsive layout, readable typography and clear feedback.</p>
+            </article>
+            <article class="feature-card">
+              <i data-lucide="life-buoy"></i>
+              <h3>Help &amp; support</h3>
+              <p>Guidance for adding products and using AI-assisted features.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+          <span>© KalaSetu · Rooted in tradition, open to opportunity.</span>
+          <span><i data-lucide="shield-check"></i> Artisan-first design</span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+
+  <!-- ADD PRODUCT DIALOG -->
+  <dialog class="modal" id="productModal">
+    <form id="productForm">
+      <div class="modal-header">
+        <div>
+          <span class="section-kicker">GIVE YOUR CRAFT A STAGE</span>
+          <h2>Add a product</h2>
+        </div>
+        <button type="button" class="icon-button" data-close-modal aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="form-grid">
+        <label class="field-full">
+          Product name
+          <input name="name" required maxlength="120"
+            placeholder="e.g. Handwoven cotton stole" />
+        </label>
+
+        <label>
+          Craft category
+          <select name="category" required>
+            <option value="">Choose category</option>
+            <option>Textiles &amp; handloom</option>
+            <option>Pottery &amp; ceramics</option>
+            <option>Woodcraft</option>
+            <option>Metal craft</option>
+            <option>Jewellery</option>
+            <option>Home decor</option>
+            <option>Other handicrafts</option>
+          </select>
+        </label>
+
+        <label>
+          Asking price (₹)
+          <input name="price" type="number" min="1" step="1" required
+            placeholder="1500" />
+        </label>
+
+        <label>
+          Available quantity
+          <input name="quantity" type="number" min="0" step="1" value="1" required />
+        </label>
+
+        <label>
+          Materials
+          <input name="materials" maxlength="160"
+            placeholder="Cotton, natural dyes..." />
+        </label>
+
+        <label class="field-full">
+          Product description
+          <textarea name="description" rows="3" maxlength="1500"
+            placeholder="Describe the materials, process and story behind this product."></textarea>
+        </label>
+
+        <label class="field-full upload-field">
+          <i data-lucide="image-plus"></i>
+          <span>
+            <strong>Product photo</strong>
+            <small>Choose a JPG, PNG or WebP image (max 5 MB).</small>
+          </span>
+          <input id="productImageInput" name="image" type="file"
+            accept="image/jpeg,image/png,image/webp" />
+        </label>
+
+        <div id="productAiAnalysis" class="field-full" aria-live="polite" hidden>
+          <p id="productAiStatus"></p>
+          <div id="productAiSuggestions" hidden>
+            <p id="productAiCategory"></p>
+            <p id="productAiMaterial"></p>
+            <p id="productAiColor"></p>
+            <p id="productAiWarning"></p>
+            <button type="button" id="applyProductAiSuggestions"
+              class="button button-outline">
+              Apply suggestions to form
+            </button>
+          </div>
+        </div>
+
+        <label class="field-full ai-checkbox">
+          <input name="aiCatalogue" type="checkbox" checked />
+          <span>
+            Request AI-assisted title, category and description suggestions
+            when the service is connected.
+          </span>
+        </label>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="button button-outline" data-close-modal>
+          Cancel
+        </button>
+        <button type="submit" class="button button-primary">
+          <i data-lucide="plus"></i> Save product
+        </button>
+      </div>
+
+      <p class="form-note">
+        AI suggestions are experimental. Review all details before saving.
+        Your product is submitted to KalaSetu for server-side storage.
+      </p>
+    </form>
+  </dialog>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

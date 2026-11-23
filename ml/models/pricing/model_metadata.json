@@ -1,0 +1,32 @@
+{
+    "model_name": "xgboost_regressor",
+    "model_version": "1.0.0",
+    "model_type": "XGBRegressor",
+    "target": "fair_price",
+    "feature_count": 21,
+    "feature_names": [
+        "size_cm",
+        "production_hours",
+        "material_cost",
+        "labor_cost",
+        "demand_score",
+        "complexity_score",
+        "craft_category_metal_craft",
+        "craft_category_pottery",
+        "craft_category_textile",
+        "craft_category_wood_craft",
+        "material_clay",
+        "material_cotton",
+        "material_metal",
+        "material_wood",
+        "region_gujarat",
+        "region_karnataka",
+        "region_kerala",
+        "region_maharashtra",
+        "region_rajasthan",
+        "region_tamil nadu",
+        "region_west bengal"
+    ],
+    "model_file": "fair_pricing_model.json",
+    "encoder_file": "feature_encoder.joblib"
+}

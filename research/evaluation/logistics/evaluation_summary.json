@@ -1,0 +1,45 @@
+{
+    "evaluation_samples": 20,
+    "routes_generated": 4,
+    "total_distance_km": 111.973,
+    "average_route_distance_km": 27.993,
+    "route_valid": true,
+    "routes": [
+        [
+            0,
+            1,
+            7,
+            14,
+            19,
+            5,
+            10,
+            0
+        ],
+        [
+            0,
+            13,
+            17,
+            3,
+            9,
+            4,
+            12,
+            0
+        ],
+        [
+            0,
+            2,
+            18,
+            6,
+            11,
+            15,
+            0
+        ],
+        [
+            0,
+            8,
+            16,
+            0
+        ]
+    ],
+    "research_valid": false
+}
